@@ -1,2 +1,2 @@
-sudo docker-compose run web django-admin startproject composeexample .
+sudo docker-compose run web django-admin startproject kazdream .
 sudo docker-compose up
