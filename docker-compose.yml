@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=kazdream
+      - POSTGRES_USER=kazdream
+      - POSTGRES_PASSWORD=kazdream
+  web:
+    build: .
+    command: python manage.py runserver 
+    volumes:
+      - .:/kazdream
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
