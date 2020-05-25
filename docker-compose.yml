@@ -9,7 +9,7 @@ services:
       - POSTGRES_PASSWORD=kazdream
   web:
     build: .
-    command: python manage.py runserver 
+    command: python manage.py runserver
     volumes:
       - .:/kazdream
     ports:
